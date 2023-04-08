@@ -1,0 +1,23 @@
+html[data-theme="dark"] {
+  --primary: #e19600;
+  --error: rgb(87, 20, 20);
+  --secondary: #9d5a0b;
+  --thirdly: #5a3908;
+  --dark: #150d00;
+  --light: #efe6d8;
+}
+html[data-theme="light"] {
+  --primary: #251701;
+  --error: rgb(178, 48, 48);
+  --secondary: #9d713f;
+  --thirdly: #655337;
+  --dark: #efe6d8;
+  --light: #150d00;
+}
+
+$dark: var(--dark);
+$thirdly: var(--thirdly);
+$secondary: var(--secondary);
+$primary: var(--primary);
+$error: var(--error);
+$light: var(--light);

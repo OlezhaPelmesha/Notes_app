@@ -1,2 +1,1 @@
-# Notes_app
-# Notes_app
+# Deploy https://notes-b287c.web.app/

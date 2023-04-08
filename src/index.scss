@@ -1,0 +1,61 @@
+@import "./var.scss";
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap");
+@import "./animations.scss";
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: background 0.2s ease-in-out;
+  background: $dark;
+  font-size: 16px;
+  transform-origin: top;
+  animation: containerAppearing 0.5s ease-out;
+  &.block {
+    overflow: hidden;
+  }
+  .App {
+    margin: 0 auto;
+    padding: 35px 15px 0;
+    max-width: 1200px;
+    min-height: 100vh;
+    font-family: "Sarabun", sans-serif;
+    position: relative;
+  }
+  button {
+    outline: none;
+  }
+  input,
+  textarea {
+    outline: 0;
+  }
+  .popup {
+    transform-origin: top right;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+  }
+}
+
+.popup.active {
+  transform: scale(1);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: $thirdly;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary;
+}

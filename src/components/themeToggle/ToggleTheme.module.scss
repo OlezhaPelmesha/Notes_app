@@ -1,0 +1,54 @@
+@import "./../../var.scss";
+.togglerTheme {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  .switchField {
+    display: flex;
+    margin-bottom: 36px;
+    overflow: hidden;
+    input {
+      position: absolute !important;
+      visibility: hidden;
+    }
+
+    input ~ label {
+      display: inline-block;
+      background-color: $light;
+      color: $primary;
+      font-size: calc(1rem - 2px);
+      line-height: 1;
+      text-align: center;
+      padding: 5px 12px;
+
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3),
+        0 1px rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease-in-out;
+    }
+
+    label:hover {
+      cursor: pointer;
+    }
+
+    input:checked + label {
+      background-color: $secondary;
+      box-shadow: none;
+    }
+
+    label:first-of-type {
+      border-radius: 4px 0 0 4px;
+    }
+
+    label:last-of-type {
+      border-radius: 0 4px 4px 0;
+    }
+    .moon {
+      color: rgb(180, 170, 124) !important;
+    }
+
+    .sun {
+      color: rgb(205, 205, 25) !important;
+    }
+  }
+}
